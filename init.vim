@@ -78,3 +78,6 @@ autocmd BufWritePost * GitGutter "" Turn on updates when saving
 
 " Airline-ale integration
 let g:airline#extensions#ale#enabled = 1
+
+" ale configuration
+let g:ale_linter_aliases = {'ino': 'cpp'}
