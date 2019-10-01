@@ -15,6 +15,10 @@ set termguicolors
 " Change current dir automatically to current opened file
 set autochdir "" This is nvi internal variable
 
+" Enable completion where available.
+" This setting must be set before ALE is loaded
+let g:ale_competion_enabled = 1
+
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Initialize plugins here
