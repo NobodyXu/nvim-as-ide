@@ -81,3 +81,8 @@ let g:airline#extensions#ale#enabled = 1
 
 " ale configuration
 let g:ale_linter_aliases = {'ino': 'cpp'}
+
+" local_vimrc configuration
+" Whitelist for the Development dir so that there will be no prompt when
+" opening files in there.
+call lh#local_vimrc#munge('whitelist', $HOME . "/Development")
