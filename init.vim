@@ -74,3 +74,6 @@ let g:GitGutterLineHighlightsEnable = 1
 let g:GitGutterLineNrHighlightsEnable = 1
 
 autocmd BufWritePost * GitGutter "" Turn on updates when saving
+
+" Airline-ale integration
+let g:airline#extensions#ale#enabled = 1
