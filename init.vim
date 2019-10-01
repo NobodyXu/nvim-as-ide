@@ -38,6 +38,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'LucHermitte/lh-vim-lib'  """ lh-vim-lib is the runtime for all other LucHermitte plugins
 Plug 'LucHermitte/lh-brackets'
+Plug 'LucHermitte/local_vimrc'
 
 call plug#end()
 
