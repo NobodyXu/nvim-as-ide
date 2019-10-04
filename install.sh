@@ -14,8 +14,12 @@ symlink() {
     fi
 }
 
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim_plug="${HOME}/.local/share/nvim/site/autoload/plug.vim"
+
+if [ ! -e ${vim_plug} ]; then
+    curl -fLo ${vim_plug} --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
 
 mkdir -p ~/.config/nvim
 
