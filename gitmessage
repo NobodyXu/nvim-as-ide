@@ -1,0 +1,15 @@
+# Template for commit:
+#
+#     Summarize the change in less than 50 characters
+#     
+#     Because:
+#      - Explain the reasons you made this change
+#      - Make a new bullet for each reason
+#      - Each line should be under 72 characters
+#     
+#     Explain exactly what was done in this commit more with depth than the
+#     50 character subject line. Remeber to wrap at 72 characers!
+#     
+#     Include any additional notes, relevant links, or co-authors.
+#     
+#     This commit message template is adapted from https://dev.to/jacobherrington/how-to-write-useful-commit-messages-my-commit-message-template-20n9

@@ -25,4 +25,8 @@ mkdir -p ~/.config/nvim
 
 symlink init.vim ~/.config/nvim/init.vim
 
+# Customize git
+symlink gitmessage ~/.gitmessage
+git config --global commit.template ~/.gitmessage
+
 nvim -c ":PlugInstall"
