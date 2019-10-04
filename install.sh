@@ -7,7 +7,11 @@ mkdir -p ~/.config/nvim
 
 # Backup previous init.vim
 config_file=~/.config/nvim/init.vim
-mv $config_file ${config_file}.bk.`date -u | sed 's/ /_/g'`
+
+if [ -e $config_file ]; then
+    mv $config_file ${config_file}.bk.`date -u | sed 's/ /_/g'`
+fi
+
 ln -s `pwd`/init.vim $config_file
 
 nvim -c ":PlugInstall"
