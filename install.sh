@@ -1,19 +1,24 @@
 #!/bin/sh
 
+symlink() {
+    curr_dir=`pwd`
+    src=$1
+    dst=$2
+    
+    if [ ${curr_dir}/${src} != `realpath $dst` ]; then
+        if [ -e $dst ]; then
+            mv $dst ${dst}.bk.`date -u | sed 's/ /_/g'`
+        fi
+
+        ln -s ${curr_dir}/${src} $dst
+    fi
+}
+
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 mkdir -p ~/.config/nvim
 
-# Backup previous init.vim
-config_file=~/.config/nvim/init.vim
-
-if [ `realpath $config_file` != `realpath init.vim` ]; then
-    if [ -e $config_file ]; then
-        mv $config_file ${config_file}.bk.`date -u | sed 's/ /_/g'`
-    fi
-    
-    ln -s `pwd`/init.vim $config_file
-fi
+symlink init.vim ~/.config/nvim/init.vim
 
 nvim -c ":PlugInstall"
