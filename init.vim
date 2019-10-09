@@ -111,7 +111,8 @@ let cmdline_auto_scroll = 1      " Keep the cursor at the end of terminal (nvim)
 
 " python-mode configuration
 " Turn pymode on
-let g:pymode = 1
+"let g:pymode = 1
+let g:pymode = 0
 " Turn off plugin's warnings
 let g:pymode_warnings = 1
 " Use default settings(documented in :h pymode
@@ -131,7 +132,8 @@ let g:pymode_run = 1
 let g:pymode_run_bind = '<leader>r'
 
 " Linting
-let g:pymode_lint = 1
+"let g:pymode_lint = 1
+let g:pymode_lint = 0
 let g:pymode_lint_on_fly = 0
 let g:pymode_lint_message = 1
 let g:pymode_lint_checkers = 'pylint'
