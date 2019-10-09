@@ -39,6 +39,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'LucHermitte/lh-vim-lib'  """ lh-vim-lib is the runtime for all other LucHermitte plugins
 Plug 'LucHermitte/lh-brackets'
 Plug 'LucHermitte/local_vimrc'
+Plug 'jalvesaq/vimcmdline'
+Plug 'python-mode/python-mode'
 
 call plug#end()
 
@@ -87,3 +89,63 @@ let g:ale_cpp_gcc_options = "-std=c++17" . system("./get_CPPFLAGS.sh")
 " Whitelist for the Development dir so that there will be no prompt when
 " opening files in there.
 call lh#local_vimrc#munge('whitelist', $HOME . "/Development")
+
+" vim-cmdline configuration
+let cmdline_map_start          = '\s'
+"let cmdline_map_send           = '\<Space>'
+let cmdline_map_send_and_stay  = '\l'
+" Send file
+let cmdline_map_source_fun     = '\f'
+let cmdline_map_send_paragraph = '\p'
+let cmdline_map_send_block     = '\b'
+let cmdline_map_quit           = '\q'
+
+" vimcmdline options
+let cmdline_vsplit      = 1      " Split the window vertically
+let cmdline_in_buffer   = 0      " Start the interpreter in tmux since vimcmdline doesn't support vim term
+let cmdline_in_buffer   = 1      " Start the interpreter in a Neovim's terminal
+" let cmdline_term_height = 15     " Initial height of interpreter window or pane
+" let cmdline_term_width  = 80     " Initial width of interpreter window or pane
+let cmdline_tmp_dir     = '/tmp' " Temporary directory to save files
+let cmdline_outhl       = 1      " Syntax highlight the output
+let cmdline_auto_scroll = 1      " Keep the cursor at the end of terminal (nvim)
+
+" python-mode configuration
+" Turn pymode on
+let g:pymode = 1
+" Turn off plugin's warnings
+let g:pymode_warnings = 1
+" Use default settings(documented in :h pymode
+let g:pymode_options = 1
+
+" Use python3 and enable indent
+let g:pymode_python = 'python3'
+let g:pymode_indent = 1
+
+" Show pydoc when pressing 'K'
+let g:pymode_doc = 1
+let g:pymode_doc_bind = 'K'
+
+" Run python code
+let g:pymode_run = 1
+" It seems that by default, '<leader>' in vim is '\'
+let g:pymode_run_bind = '<leader>r'
+
+" Linting
+let g:pymode_lint = 1
+let g:pymode_lint_on_fly = 0
+let g:pymode_lint_message = 1
+let g:pymode_lint_checkers = 'pylint'
+let g:pymode_lint_cwindow = 1
+let g:pymode_lint_signs = 1
+
+" Turn on code completion
+let g:pymode_rope_completion = 1
+let g:pymode_rope_complete_on_dot = 1
+
+" Syntax highlighting
+let g:pymode_syntax = 1
+let g:pymode_syntax_slow_sync = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
