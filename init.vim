@@ -42,6 +42,7 @@ Plug 'LucHermitte/local_vimrc'
 Plug 'jalvesaq/vimcmdline'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'tfnico/vim-gradle'
+Plug 'ekalinin/dockerfile.vim'
 
 call plug#end()
 
