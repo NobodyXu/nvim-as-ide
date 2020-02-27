@@ -15,6 +15,9 @@ set termguicolors
 " Change current dir automatically to current opened file
 set autochdir "" This is nvi internal variable
 
+" Map terminal esc to esc
+tnoremap <Esc> <C-\><C-n>
+
 " Enable completion where available.
 " This setting must be set before ALE is loaded
 let g:ale_competion_enabled = 1
