@@ -46,6 +46,7 @@ Plug 'jalvesaq/vimcmdline'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'tfnico/vim-gradle'
 Plug 'ekalinin/dockerfile.vim'
+Plug 'vim-scripts/Conque-GDB'
 
 call plug#end()
 
@@ -156,3 +157,6 @@ let g:pymode_syntax_slow_sync = 1
 let g:pymode_syntax_all = 1
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+" Conque-GDB configuration
+let g:ConqueTerm_StartMessages = 0 " display warning messages if conqueTerm is configured incorrectly  "
