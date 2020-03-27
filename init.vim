@@ -18,6 +18,12 @@ set autochdir "" This is nvi internal variable
 " Map terminal esc to esc
 tnoremap <Esc> <C-\><C-n>
 
+if has('nvim')
+  let $GIT_EDITOR = 'nvr -cc split --remote-wait'
+endif
+
+autocmd FileType gitcommit,gitrebase,gitconfig set bufhidden=delete
+
 " Enable completion where available.
 " This setting must be set before ALE is loaded
 let g:ale_competion_enabled = 1
