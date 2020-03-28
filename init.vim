@@ -54,6 +54,7 @@ Plug 'tfnico/vim-gradle'
 Plug 'ekalinin/dockerfile.vim'
 Plug 'vim-scripts/Conque-GDB'
 Plug 'lifepillar/pgsql.vim'
+Plug 'martingms/vipsql'
 
 call plug#end()
 
@@ -170,3 +171,30 @@ let g:ConqueTerm_StartMessages = 0 " display warning messages if conqueTerm is c
 
 " lifepillar/pgsql.vim configuration
 let g:sql_type_default = 'pgsql'
+
+" martingms/vipsql configuration
+" Starts an async psql job, prompting for the psql arguments.
+" Also opens a scratch buffer where output from psql is directed.
+noremap ;po :VipsqlOpenSession<CR>
+
+" Terminates psql (happens automatically if the output buffer is closed).
+noremap <silent> ;pk :VipsqlCloseSession<CR>
+
+" In normal-mode, prompts for input to psql directly.
+nnoremap ;ps :VipsqlShell<CR>
+
+" In visual-mode, sends the selected text to psql.
+vnoremap ;ps :VipsqlSendSelection<CR>
+
+" Sends the selected _range_ to psql.
+noremap ;pr :VipsqlSendRange<CR>
+
+" Sends the current line to psql.
+noremap ;pl :VipsqlSendCurrentLine<CR>
+
+" Sends the entire current buffer to psql.
+noremap ;pb :VipsqlSendBuffer<CR>
+
+" Sends `SIGINT` (C-c) to the psql process.
+noremap ;pc :VipsqlSendInterrupt<CR>
+
