@@ -81,7 +81,10 @@ colorscheme NeoSolarized
 
 let g:neosolarized_italic = 0
 
-set background=dark
+let g:neosolarized_contrast = "low"
+let g:neosolarized_visibility = "high"
+
+set background=light
 
 " lh-brackets configurations
 let g:usemarks = 0
