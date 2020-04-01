@@ -105,7 +105,7 @@ let g:ale_cpp_gcc_options = "-std=c++17" . system("./get_CPPFLAGS.sh")
 " local_vimrc configuration
 " Whitelist for the Development dir so that there will be no prompt when
 " opening files in there.
-call lh#local_vimrc#munge('whitelist', $HOME . "/Development")
+call lh#local_vimrc#munge('whitelist', $HOME . "/Dev")
 
 " vim-cmdline configuration
 let cmdline_map_start          = '\s'
