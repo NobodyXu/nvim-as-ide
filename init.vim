@@ -243,3 +243,6 @@ let g:closetag_shortcut = '>'
 " Add > at current position without closing the current tag, default is ''
 "
 let g:closetag_close_shortcut = '<leader>>'
+
+"" Disable lh-bracket for html files to prevent interference with this plugin
+autocmd FileType html :let g:cb_disable_default = { '<': 'inv' }
