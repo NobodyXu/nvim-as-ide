@@ -203,6 +203,8 @@ noremap ;pb :VipsqlSendBuffer<CR>
 noremap ;pc :VipsqlSendInterrupt<CR>
 
 " alvan/vim-closetag configuration
+" For html linting, just `brew install tidy-html5` and it will work fine with
+" ale.
 " filenames like *.xml, *.html, *.xhtml, ...
 " These are the file extensions where this plugin is enabled.
 "
