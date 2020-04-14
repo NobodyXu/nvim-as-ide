@@ -56,6 +56,7 @@ Plug 'ekalinin/dockerfile.vim'
 Plug 'lifepillar/pgsql.vim'
 Plug 'martingms/vipsql'
 Plug 'alvan/vim-closetag'
+Plug 'chr4/nginx.vim'
 
 call plug#end()
 
