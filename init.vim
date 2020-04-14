@@ -57,6 +57,7 @@ Plug 'lifepillar/pgsql.vim'
 Plug 'martingms/vipsql'
 Plug 'alvan/vim-closetag'
 Plug 'chr4/nginx.vim'
+Plug 'chr4/sslsecure.vim'
 
 call plug#end()
 
