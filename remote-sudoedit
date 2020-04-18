@@ -1,0 +1,17 @@
+#!/bin/bash -ex
+
+TMP_FILE=$(basename "$2")
+
+ssh -t "$1" "/bin/bash -c \"
+mkdir -p /tmp/remote-sudoedit/
+cd /tmp/remote-sudoedit/
+/usr/bin/env SUDO_EDITOR=cat sudoedit '$2' | tee '$TMP_FILE'\""
+
+nvim scp://"$1"//tmp/remote-sudoedit/"$TMP_FILE"
+
+#ssh -t "$1" /bin/bash -c "sudo cp '$TMP_FILE' '$2'; rm "
+
+ssh -t "$1" "/bin/bash -c \"
+cd /tmp/remote-sudoedit/
+sudo cp '$TMP_FILE' '$2'
+rm '$TMP_FILE'\""

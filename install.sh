@@ -29,4 +29,7 @@ symlink init.vim ~/.config/nvim/init.vim
 symlink gitmessage ~/.gitmessage
 git config --global commit.template ~/.gitmessage
 
+# Add script
+symlink remote-sudoedit ~/.local/bin/remote-sudoedit
+
 nvim -c ":PlugInstall"
