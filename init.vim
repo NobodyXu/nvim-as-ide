@@ -103,7 +103,9 @@ let g:airline#extensions#ale#enabled = 1
 
 " ale configuration
 let g:ale_linter_aliases = {'ino': 'cpp'}
-let g:ale_cpp_gcc_options = "-std=c++17" . system("./get_CPPFLAGS.sh")
+" let g:ale_cpp_gcc_options = "-std=c++17" . system("./get_CPPFLAGS.sh")
+let g:ale_cpp_gcc_options = "-std=c++17"
+let g:ale_cpp_clang_options = "-std=c++17"
 
 " local_vimrc configuration
 " Whitelist for the Development dir so that there will be no prompt when
