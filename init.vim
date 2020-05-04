@@ -59,6 +59,14 @@ Plug 'alvan/vim-closetag'
 Plug 'chr4/nginx.vim'
 Plug 'chr4/sslsecure.vim'
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 call plug#end()
 
 " NERTTree configurations
@@ -252,3 +260,6 @@ let g:closetag_close_shortcut = '<leader>>'
 
 "" Disable lh-bracket for html files to prevent interference with this plugin
 autocmd FileType html :let g:cb_disable_default = { '<': 'inv' }
+
+" deoplete.nvim configuration
+let g:deoplete#enable_at_startup = 1
