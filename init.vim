@@ -67,6 +67,10 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+" This plugin is a supplicant for deoplete.nvim
+" It shows function signature during completion
+Plug 'Shougo/echodoc.vim'
+
 call plug#end()
 
 " NERTTree configurations
@@ -278,5 +282,10 @@ let g:closetag_close_shortcut = '<leader>>'
 "" Disable lh-bracket for html files to prevent interference with this plugin
 autocmd FileType html :let g:cb_disable_default = { '<': 'inv' }
 
-" deoplete.nvim configuration
+" shougo/deoplete.nvim configuration
 let g:deoplete#enable_at_startup = 1
+
+" Shougo/echodoc.vim configuration
+let g:echodoc#enable_at_startup	= 1
+"" use neovim's virtual virtual text feature.
+let g:echodoc#type = 'virtual'
