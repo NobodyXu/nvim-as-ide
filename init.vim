@@ -126,6 +126,7 @@ let g:airline#extensions#ale#enabled = 1
 
 " ale configuration
 let g:ale_linter_aliases = {'ino': 'cpp'}
+let g:ale_c_parse_makefile = 1
 " let g:ale_cpp_gcc_options = "-std=c++17" . system("./get_CPPFLAGS.sh")
 
 let g:ale_c_parse_compile_commands = 1
