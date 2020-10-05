@@ -73,6 +73,8 @@ endif
 " It shows function signature during completion
 Plug 'Shougo/echodoc.vim'
 
+Plug 'Shougo/deoplete-clangx'
+
 " vim-javacomplete2 configurations
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 let g:JavaComplete_EnableDefaultMappings = 0
@@ -110,6 +112,7 @@ set background=dark
 
 let g:ale_linter_aliases = {'h': 'c', 'hpp': 'cpp', 'cc': 'cpp'}
 
+let g:ale_c_cc_options = "-std=c11 -Wall"
 let g:ale_cpp_cc_options = '-std=c++17 -Wall -Wno-c++11-extensions'
 
 let g:ale_cpp_clangtidy_options = '-Wall -std=c++17 -x c++'
@@ -121,6 +124,10 @@ let g:usemarks = 0
 " vim-gitgutter configurations
 let g:GitGutterLineHighlightsEnable = 1
 let g:GitGutterLineNrHighlightsEnable = 1
+
+" Shougo/deoplete-clangx configuration
+call deoplete#custom#var('clangx', 'default_c_options', g:ale_c_cc_options)
+call deoplete#custom#var('clangx', 'default_cpp_options', g:ale_cpp_cc_options)
 
 autocmd BufWritePost * GitGutter "" Turn on updates when saving
 
