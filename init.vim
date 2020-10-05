@@ -59,6 +59,8 @@ Plug 'alvan/vim-closetag'
 Plug 'chr4/nginx.vim'
 Plug 'chr4/sslsecure.vim'
 
+Plug 'artur-shaik/vim-javacomplete2'
+
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -70,6 +72,11 @@ endif
 " This plugin is a supplicant for deoplete.nvim
 " It shows function signature during completion
 Plug 'Shougo/echodoc.vim'
+
+" vim-javacomplete2 configurations
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+let g:JavaComplete_EnableDefaultMappings = 0
+let g:JavaComplete_ClosingBrace = 1
 
 call plug#end()
 
