@@ -75,6 +75,8 @@ Plug 'Shougo/echodoc.vim'
 
 Plug 'Shougo/deoplete-clangx'
 
+Plug 'junegunn/fzf'
+
 " vim-javacomplete2 configurations
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 let g:JavaComplete_EnableDefaultMappings = 0
