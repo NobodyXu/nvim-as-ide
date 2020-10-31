@@ -1,5 +1,7 @@
 # nvim-as-ide
 
+This repository contains my configuration of `nvim` that makes it feels like an IDE.
+
 ## How to use this package
 
  1. [Install `neovim` on your computer.](https://github.com/neovim/neovim/wiki/Installing-Neovim)
