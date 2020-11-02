@@ -18,6 +18,9 @@ set autochdir "" This is nvi internal variable
 " Map terminal esc to esc
 tnoremap <Esc> <C-\><C-n>
 
+" Enable doxygen highlighting
+let g:load_doxygen_syntax=1
+
 if has('nvim')
   let $GIT_EDITOR = 'nvr -cc split --remote-wait'
 endif
