@@ -120,8 +120,8 @@ let g:ale_linter_aliases = {'h': 'c', 'hpp': 'cpp', 'cc': 'cpp'}
 let g:ale_c_cc_options = "-std=c11 -Wall"
 let g:ale_cpp_cc_options = '-std=c++17 -Wall -Wno-c++11-extensions'
 
-let g:ale_cpp_clangtidy_options = '-Wall -std=c++17 -x c++'
-let g:ale_cpp_clangcheck_options = '-- -Wall -std=c++17 -x c++'
+let g:ale_cpp_clangtidy_options = '-x c++ -std=c++17 -Wall'
+let g:ale_cpp_clangcheck_options = '-- -x c++ --std=c++17 -Wall'
 
 " lh-brackets configurations
 let g:usemarks = 0
