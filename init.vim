@@ -64,6 +64,8 @@ Plug 'chr4/sslsecure.vim'
 
 Plug 'artur-shaik/vim-javacomplete2'
 
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
