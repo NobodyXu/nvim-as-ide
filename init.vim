@@ -80,6 +80,8 @@ Plug 'Shougo/deoplete-clangx'
 
 Plug 'junegunn/fzf'
 
+Plug 'rust-lang/rust.vim'
+
 " vim-javacomplete2 configurations
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 let g:JavaComplete_EnableDefaultMappings = 0
@@ -246,6 +248,10 @@ noremap ;pb :VipsqlSendBuffer<CR>
 
 " Sends `SIGINT` (C-c) to the psql process.
 noremap ;pc :VipsqlSendInterrupt<CR>
+
+" ale rust configuration
+let g:ale_linters = {'rust': ['analyzer', 'cargo', 'rls', 'rustc', 'rustfmt']}
+let g:ale_rust_cargo_use_clippy = 1
 
 " alvan/vim-closetag configuration
 " For html linting, just `brew install tidy-html5` and it will work fine with
