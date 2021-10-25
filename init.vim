@@ -83,6 +83,10 @@ Plug 'junegunn/fzf'
 Plug 'rust-lang/rust.vim'
 Plug 'LucHermitte/vim-refactor'
 
+" rust.vim configuration
+" Automatically run rust format on save
+let g:rustfmt_autosave = 1
+
 " vim-javacomplete2 configurations
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 let g:JavaComplete_EnableDefaultMappings = 0
