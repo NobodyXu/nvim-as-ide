@@ -49,7 +49,7 @@ Plug 'dense-analysis/ale'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'LucHermitte/lh-vim-lib'  """ lh-vim-lib is the runtime for all other LucHermitte plugins
-Plug 'LucHermitte/lh-brackets'
+"Plug 'LucHermitte/lh-brackets'
 Plug 'LucHermitte/local_vimrc'
 Plug 'jalvesaq/vimcmdline'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
@@ -81,6 +81,7 @@ Plug 'Shougo/deoplete-clangx'
 Plug 'junegunn/fzf'
 
 Plug 'rust-lang/rust.vim'
+Plug 'LucHermitte/vim-refactor'
 
 " vim-javacomplete2 configurations
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
@@ -128,7 +129,7 @@ let g:ale_cpp_clangcheck_options = '-- -x c++ --std=c++17 -Wall'
 let g:ale_cpp_clangd_options = '-std=c++17'
 
 " lh-brackets configurations
-let g:usemarks = 0
+"let g:usemarks = 0
 
 " vim-gitgutter configurations
 let g:GitGutterLineHighlightsEnable = 1
