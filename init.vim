@@ -255,7 +255,7 @@ noremap ;pb :VipsqlSendBuffer<CR>
 noremap ;pc :VipsqlSendInterrupt<CR>
 
 " ale rust configuration
-let g:ale_linters = {'rust': ['analyzer', 'cargo', 'rls', 'rustc', 'rustfmt']}
+let g:ale_linters = {'rust': ['analyzer', 'cargo', 'rustc', 'rustfmt']}
 let g:ale_rust_cargo_use_clippy = 1
 
 " alvan/vim-closetag configuration
