@@ -83,6 +83,8 @@ Plug 'junegunn/fzf'
 Plug 'rust-lang/rust.vim'
 Plug 'LucHermitte/vim-refactor'
 
+Plug 'neovim/nvim-lspconfig'
+
 " rust.vim configuration
 " Automatically run rust format on save
 let g:rustfmt_autosave = 1
