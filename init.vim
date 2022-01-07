@@ -44,7 +44,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'iCyMind/NeoSolarized'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } """ Load the plugin when the command `:NERTTreeToggle` is executed.
 Plug 'vim-airline/vim-airline'
-Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
@@ -55,12 +54,8 @@ Plug 'jalvesaq/vimcmdline'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'tfnico/vim-gradle'
 Plug 'ekalinin/dockerfile.vim'
-"Plug 'vim-scripts/Conque-GDB'
 Plug 'lifepillar/pgsql.vim'
-Plug 'martingms/vipsql'
 Plug 'alvan/vim-closetag'
-Plug 'chr4/nginx.vim'
-Plug 'chr4/sslsecure.vim'
 
 Plug 'artur-shaik/vim-javacomplete2'
 
@@ -79,11 +74,34 @@ Plug 'Shougo/echodoc.vim'
 Plug 'Shougo/deoplete-clangx'
 
 Plug 'junegunn/fzf'
-
 Plug 'rust-lang/rust.vim'
-Plug 'LucHermitte/vim-refactor'
 
 Plug 'neovim/nvim-lspconfig'
+
+" rust-analyzer configuration
+"lua << EOF
+"local nvim_lsp = require'lspconfig'
+"
+"local on_attach = function(client)
+"    require'completion'.on_attach(client)
+"end
+"
+"nvim_lsp.rust_analyzer.setup({
+"    on_attach=on_attach,
+"    settings = {
+"        ["rust-analyzer"] = {
+"            assist = {
+"                importGranularity = "module",
+"                importPrefix = "by_self",
+"            },
+"            cargo = {
+"                loadOutDirsFromCheck = true
+"                allFeatures = true
+"            },
+"        }
+"    }
+"})
+"EOF
 
 " rust.vim configuration
 " Automatically run rust format on save
