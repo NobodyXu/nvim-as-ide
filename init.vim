@@ -459,8 +459,4 @@ nnoremap <silent> ga    <cmd>lua vim.lsp.buf.code_action()<CR>
 " 300ms of no cursor movement to trigger CursorHold
 set updatetime=300
 
-" have a fixed column for the diagnostics to appear in
-" this removes the jitter when warnings/errors flow in
-set signcolumn=yes
-
 autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 200)
