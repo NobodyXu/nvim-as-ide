@@ -395,6 +395,9 @@ local opts = {
                 checkOnSave = {
                     command = "clippy"
                 },
+                cargo = {
+                    allFeatures = true
+                },
             }
         }
     },
