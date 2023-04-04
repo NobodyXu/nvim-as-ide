@@ -373,7 +373,6 @@ local nvim_lsp = require'lspconfig'
 local opts = {
     tools = { -- rust-tools options
         autoSetHints = true,
-        hover_with_actions = true,
     },
 
     -- all the opts to send to nvim-lspconfig
